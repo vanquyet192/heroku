@@ -24,7 +24,7 @@ class HomeController extends AbstractController
         $this->entityManager = $registry->getManager();
     }
     
-    #[Route('/', name: 'app_home')]
+    #[Route('/home', name: 'app_home')]
     public function index(ProductRepository $productRepository): Response
 {
     $products = $productRepository->findBy([], [], 8); 
